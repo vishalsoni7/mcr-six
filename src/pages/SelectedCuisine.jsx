@@ -17,6 +17,7 @@ export const SelectedCuisine = () => {
   return (
     <div className="selected">
       <Home />
+
       <div>
         {restro?.map(({ id, menu, name }) => (
           <div className="selected-card" key={id}>
@@ -27,7 +28,7 @@ export const SelectedCuisine = () => {
                   <div className="card">
                     <img src={imgSrc} alt={name} />
                     <p>{name}</p>
-                    <span className="span-c">{price}</span>
+                    <span className="span-c"> {price}</span>
                     <span className="span-c">{restro?.name}</span>
                   </div>
                 </NavLink>

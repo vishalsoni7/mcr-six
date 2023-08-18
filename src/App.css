@@ -15,7 +15,13 @@ body {
 
 .selected-card {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cards-layout {
+  display: flex;
+  align-items: center;
 }
 
 .card {
@@ -67,6 +73,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 0.5px solid;
 }
 
 .address {
@@ -74,6 +81,7 @@ button {
   flex-direction: column;
   align-items: flex-start;
   line-height: 0.8;
+  margin-bottom: 1rem;
 }
 
 .pp-img {

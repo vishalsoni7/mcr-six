@@ -13,6 +13,10 @@ export const RestroPage = () => {
 
   const currentRestro = restaurantsData.find((r) => r.id === +restorId);
 
+  const averageRating = currentRestro.ratings
+    .reduce((acc, curr) => acc + curr.rating / currentRestro.ratings.length, 0)
+    .toFixed(2);
+
   return (
     <div className="c">
       <div className="current">
@@ -24,7 +28,7 @@ export const RestroPage = () => {
             ))}
           </span>
           <p> {currentRestro?.address} </p>
-          <span> Average Rating: {currentRestro?.averageRating} </span>{" "}
+          <span> Average Rating: {averageRating} </span>{" "}
         </div>
         <button
           onClick={() =>
@@ -52,9 +56,8 @@ export const RestroPage = () => {
         </div>
       )}
 
-      <h1> Reviews </h1>
-
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", marginTop: "4rem", textAlign: "left" }}>
+        <h1> Reviews </h1>
         {currentRestro?.ratings?.map((person, i) => (
           <div key={i} className="a">
             <div className="b">

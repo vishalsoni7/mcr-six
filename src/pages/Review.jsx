@@ -54,7 +54,12 @@ export const Review = () => {
       </div>
       <div className="review">
         <span> Comment: </span>{" "}
-        <input name="comment" onChange={(e) => handleInput(e)} type="text" />{" "}
+        <input
+          placeholder="Add Comment"
+          name="comment"
+          onChange={(e) => handleInput(e)}
+          type="text"
+        />{" "}
       </div>
       <button onClick={submitHandler}> Submit </button>
     </div>

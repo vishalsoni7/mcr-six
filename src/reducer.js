@@ -5,7 +5,7 @@ export const restroInitialState = {
   restaurantsData: restaurantsData,
   modal: false,
   input: {
-    rating: "",
+    rating: "1",
     comment: "",
     revName: "",
     pp: "",
